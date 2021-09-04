@@ -2,19 +2,29 @@
 <?meta name="viewport" content="width=device-width, initial-scale=1" ?>
 
 <?style type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" ?>
+
 <?style type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" ?>
+
 <!-- <?style type="text/css" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" ?> -->
+
+<?style type="text/css" href="/plugins/fontawesome-free/css/all.min.css" ?>
+
 <?style type="text/css" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css" ?>
+
 <!-- <?style type="text/css" href="/plugins/jqvmap/jqvmap.min.css" ?> -->
+
 <?style type="text/css" href="/css/adminlte.css" ?>
+
 <?style type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" ?>
+
 <!-- <?style type="text/css" href="/plugins/daterangepicker/daterangepicker.css" ?> -->
+
 <!-- <?style type="text/css" href="/plugins/summernote/summernote-bs4.min.css" ?> -->
 
 <zk xmlns:n="native" xmlns:x="xhtml" xmlns:zk="zk"
     xmlns:w="http://www.zkoss.org/2005/zk/client">
     
-        <!-- jQuery -->
+    <!-- jQuery -->
     <script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script type="text/javascript" src="/plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -42,6 +52,7 @@
 <!--     <script type="text/javascript" src="/plugins/summernote/summernote-bs4.min.js"></script> -->
     <!-- overlayScrollbars -->
     <script type="text/javascript" src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script type="text/javascript" src="/plugins/pace-progress/pace.min.js"></script>
     <!-- AdminLTE App -->
     <script type="text/javascript" src="/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
@@ -49,9 +60,9 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!--     <script type="text/javascript" src="/js/pages/dashboard.js"></script> -->
 
+
     <div class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
-        
             <zscript><![CDATA[
                 String resource = execution.getParameter("resource");
                 String action = execution.getParameter("action");
@@ -72,18 +83,18 @@
             <n:nav class="main-header navbar navbar-expand navbar-white navbar-light">
                 <!-- Left navbar links -->
                 <n:ul class="navbar-nav">
-                	<n:li class="nav-item">
-                		<n:a class="nav-link" data-widget="pushmenu"
-                			href="#" role="button">
-                			<n:i class="fas fa-bars"></n:i>
-                		</n:a>
-                	</n:li>
-                	<n:li class="nav-item d-none d-sm-inline-block">
-                		<n:a href="index3.html" class="nav-link">Home</n:a>
-                	</n:li>
-                	<n:li class="nav-item d-none d-sm-inline-block">
-                		<n:a href="#" class="nav-link">Contact</n:a>
-                	</n:li>
+                    <n:li class="nav-item">
+                        <n:a class="nav-link" data-widget="pushmenu"
+                            href="#" role="button">
+                            <n:i class="fas fa-bars"></n:i>
+                        </n:a>
+                    </n:li>
+                    <n:li class="nav-item d-none d-sm-inline-block">
+                        <n:a href="index3.html" class="nav-link">Home</n:a>
+                    </n:li>
+                    <n:li class="nav-item d-none d-sm-inline-block">
+                        <n:a href="#" class="nav-link">Contact</n:a>
+                    </n:li>
                 </n:ul>
                 
                 <!-- Right navbar links -->
@@ -91,74 +102,177 @@
                     <!-- Messages Dropdown Menu -->
                     <n:li class="nav-item dropdown">
                         <n:a class="nav-link" data-toggle="dropdown" href="#">
-                        	<n:i class="far fa-comments"></n:i>
-                        	<n:span class="badge badge-danger navbar-badge">3</n:span>
+                            <n:i class="far fa-comments"></n:i>
+                            <n:span class="badge badge-danger navbar-badge">3</n:span>
                         </n:a>
                         <n:div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                             <n:a href="#" class="dropdown-item">
-	                            <!-- Message Start -->
-	                            <n:div class="media">
-	                                <n:img src="${execution.contextPath}/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
-	                                    <n:div class="media-body">
-	                                        <n:h3 class="dropdown-item-title">
-	                                            Brad Diesel
-	                                            <n:span class="float-right text-sm text-danger"><n:i class="fas fa-star"></n:i></n:span>
-	                                        </n:h3>
-	                                    <n:p class="text-sm">Call me whenever you can...</n:p>
-	                                    <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
-	                                </n:div>
-	                            </n:div>
-	                            <!-- Message End -->
+                                <!-- Message Start -->
+                                <n:div class="media">
+                                    <n:img src="${execution.contextPath}/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+                                        <n:div class="media-body">
+                                            <n:h3 class="dropdown-item-title">
+                                                Brad Diesel
+                                                <n:span class="float-right text-sm text-danger"><n:i class="fas fa-star"></n:i></n:span>
+                                            </n:h3>
+                                        <n:p class="text-sm">Call me whenever you can...</n:p>
+                                        <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
+                                    </n:div>
+                                </n:div>
+                                <!-- Message End -->
                             </n:a>
                             <n:div class="dropdown-divider"/>
                             
                             <n:a href="#" class="dropdown-item">
-	                            <!-- Message Start -->
-	                            <n:div class="media">
-	                                <n:img src="${execution.contextPath}/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
-	                                    <n:div class="media-body">
-	                                        <n:h3 class="dropdown-item-title">
-	                                            Brad Diesel
-	                                            <n:span class="float-right text-sm text-muted"><n:i class="fas fa-star"></n:i></n:span>
-	                                        </n:h3>
-	                                    <n:p class="text-sm">Call me whenever you can...</n:p>
-	                                    <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
-	                                </n:div>
-	                            </n:div>
-	                            <!-- Message End -->
+                                <!-- Message Start -->
+                                <n:div class="media">
+                                    <n:img src="${execution.contextPath}/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+                                        <n:div class="media-body">
+                                            <n:h3 class="dropdown-item-title">
+                                                Brad Diesel
+                                                <n:span class="float-right text-sm text-muted"><n:i class="fas fa-star"></n:i></n:span>
+                                            </n:h3>
+                                        <n:p class="text-sm">Call me whenever you can...</n:p>
+                                        <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
+                                    </n:div>
+                                </n:div>
+                                <!-- Message End -->
                             </n:a>
                             <n:div class="dropdown-divider"/>
                             
                             <n:a href="#" class="dropdown-item">
-	                            <!-- Message Start -->
-	                            <n:div class="media">
-	                                <n:img src="${execution.contextPath}/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
-	                                    <n:div class="media-body">
-	                                        <n:h3 class="dropdown-item-title">
-	                                            Brad Diesel
-	                                            <n:span class="float-right text-sm text-warning"><n:i class="fas fa-star"></n:i></n:span>
-	                                        </n:h3>
-	                                    <n:p class="text-sm">Call me whenever you can...</n:p>
-	                                    <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
-	                                </n:div>
-	                            </n:div>
-	                            <!-- Message End -->
+                                <!-- Message Start -->
+                                <n:div class="media">
+                                    <n:img src="${execution.contextPath}/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+                                        <n:div class="media-body">
+                                            <n:h3 class="dropdown-item-title">
+                                                Brad Diesel
+                                                <n:span class="float-right text-sm text-warning"><n:i class="fas fa-star"></n:i></n:span>
+                                            </n:h3>
+                                        <n:p class="text-sm">Call me whenever you can...</n:p>
+                                        <n:p class="text-sm text-muted"><n:i class="far fa-clock mr-1"></n:i> 4 Hours Ago</n:p>
+                                    </n:div>
+                                </n:div>
+                                <!-- Message End -->
                             </n:a>
                             <n:div class="dropdown-divider"/>
                             <n:a href="#" class="dropdown-item dropdown-footer">See All Messages</n:a>
                         </n:div>
                     </n:li>
+                    
+                    <!-- Notifications Dropdown Menu -->
+                    <n:li class="nav-item dropdown">
+                        <n:a class="nav-link" data-toggle="dropdown" href="#">
+                            <n:i class="far fa-bell"></n:i>
+                            <n:span class="badge badge-warning navbar-badge">15</n:span>
+                        </n:a>
+                        <n:div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                            <n:span class="dropdown-item dropdown-header">15 Notifications</n:span>
+                            <n:div class="dropdown-divider"/>
+                        
+                            <n:a href="#" class="dropdown-item">
+                                <n:i class="fas fa-envelope mr-2"></n:i> 4 new messages
+                                <n:span class="float-right text-muted text-sm">3 mins</n:span>
+                            </n:a>
+                            <n:div class="dropdown-divider"/>
+                            
+                            <n:a href="#" class="dropdown-item">
+                                <n:i class="fas fa-envelope mr-2"></n:i> 4 new messages
+                                <n:span class="float-right text-muted text-sm">3 mins</n:span>
+                            </n:a>
+                            <n:div class="dropdown-divider"/>
+                            
+                            <n:a href="#" class="dropdown-item">
+                                <n:i class="fas fa-envelope mr-2"></n:i> 4 new messages
+                                <n:span class="float-right text-muted text-sm">3 mins</n:span>
+                            </n:a>
+                            <n:div class="dropdown-divider"/>
+                            <n:a href="#" class="dropdown-item dropdown-footer">See All Notifications</n:a>
+                        </n:div>
+                    </n:li>
+                    <n:li class="nav-item">
+                        <n:a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                            <n:i class="fas fa-expand-arrows-alt"></n:i>
+                        </n:a>
+                    </n:li>
                 </n:ul>
             </n:nav>
+            <!-- /.navbar -->
+
+            <!-- Main Sidebar Container -->
+            <n:aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <n:a href="${execution.contextPath}/cp" class="brand-link">
+                    <n:img src="${execution.contextPath}/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
+                    <n:span class="brand-text font-weight-light">AdminLTE 3</n:span>
+                </n:a>
+                <!-- Sidebar -->
+                <n:div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <n:div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <n:div class="image">
+                            <n:img src="${execution.contextPath}/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" />
+                        </n:div>
+                        <n:div class="info">
+                            <n:a href="#" class="d-block">Alexander Pierce</n:a>
+                        </n:div>
+                    </n:div>
+                    
+                    <!-- Sidebar Menu -->
+                    <n:nav class="mt-2">
+                        <n:ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                            
+                            <!-- Single item menu -->
+                            <n:li class="nav-item">
+                                <n:a href="${execution.contextPath}/cp/log" class="nav-link ${resource eq 'log' ? 'active' : ''}">
+                                    <n:i class="nav-icon far fa-comment-alt"></n:i>
+                                    <n:p>Log</n:p>
+                                </n:a>
+                            </n:li>
+                            
+                            <!-- Parent-Child item menu -->
+                            <n:li class="nav-item ${resource eq 'donvi' || resource eq 'vaitro' || resource eq 'nguoidung' ? 'menu-is-opening menu-open' : ''}">
+                                <n:a href="#" class="nav-link ${resource eq 'donvi' || resource eq 'vaitro' || resource eq 'nguoidung' ? 'active' : ''}">
+                                    <n:i class="nav-icon fas fa-users-cog"></n:i>
+                                    <n:p>Người dùng
+                                        <n:i class="fas fa-angle-left right"></n:i>
+                                        <!-- <n:span class="badge badge-info right">6</n:span> -->
+                                    </n:p>
+                                </n:a>
+                                <n:ul class="nav nav-treeview">
+                                    <n:li class="nav-item">
+		                                <n:a href="${execution.contextPath}/cp/donvi" class="nav-link ${resource eq 'donvi' ? 'active' : ''}">
+		                                    <n:i class="far fa-circle nav-icon ${resource eq 'donvi' ? 'text-primary' : ''}"></n:i>
+		                                    <n:p>Đơn vị</n:p>
+		                                </n:a>
+		                            </n:li>
+		                            <n:li class="nav-item">
+                                        <n:a href="${execution.contextPath}/cp/vaitro" class="nav-link ${resource eq 'vaitro' ? 'active' : ''}">
+                                            <n:i class="far fa-circle nav-icon ${resource eq 'vaitro' ? 'text-primary' : ''}"></n:i>
+                                            <n:p>Vai trò</n:p>
+                                        </n:a>
+                                    </n:li>
+                                    <n:li class="nav-item">
+                                        <n:a href="${execution.contextPath}/cp/nguoidung" class="nav-link ${resource eq 'nguoidung' ? 'active' : ''}">
+                                            <n:i class="far fa-circle nav-icon ${resource eq 'nguoidung' ? 'text-primary' : ''}"></n:i>
+                                            <n:p>Người dùng</n:p>
+                                        </n:a>
+                                    </n:li>
+                                </n:ul>
+                            </n:li>
+                        </n:ul>
+                    </n:nav>
+                    <!-- /.sidebar-menu -->
+                </n:div>
+                <!-- /.sidebar -->
+            </n:aside>
             
-            
+            <!-- Content Wrapper. Contains page content -->
             <n:div class="content-wrapper">
                 <include instant="true" src="${execution.getParameter('file')}"></include>
             </n:div><!-- ./content-wrapper -->
             
         </div><!-- ./wrapper -->
     </div>
-
-    
-    
 </zk>
