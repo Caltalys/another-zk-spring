@@ -1,7 +1,26 @@
 <zk>
-	<window
-		viewModel="@id('vm')@init('vn.tcx.zk.module.log.LogViewModel')"
+	<window xmlns:zk="zk" xmlns:n="native" xmlns:x="xhtml"
+		viewModel="@id('vm') @init('vn.tcx.zk.module.log.LogViewModel')"
 		validationMessages="@id('vmsgs')" width="600px" vflex="1">
+		
+		<!-- Content Header (Page header) -->
+	    <n:div class="content-header">
+	      <n:div class="container-fluid">
+	        <n:div class="row mb-2">
+	          <n:div class="col-sm-6">
+	            <n:h1 class="m-0">Dashboard</n:h1>
+	          </n:div><!-- /.col -->
+	          <n:div class="col-sm-6">
+	            <n:ol class="breadcrumb float-sm-right">
+	              <n:li class="breadcrumb-item"><a href="#">Home</a></n:li>
+	              <n:li class="breadcrumb-item active">Dashboard v1</n:li>
+	            </n:ol>
+	          </n:div><!-- /.col -->
+	        </n:div><!-- /.row -->
+	      </n:div><!-- /.container-fluid -->
+	    </n:div><!-- /.content-header -->
+		
+		
 		<vlayout>
 			<hbox align="center" hflex="1">
 				Log message: <textbox value="@save(vm.message)"
