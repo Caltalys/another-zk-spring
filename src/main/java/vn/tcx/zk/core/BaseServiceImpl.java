@@ -4,7 +4,6 @@
 package vn.tcx.zk.core;
 
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.Collections;
 
 import javax.annotation.Nullable;
