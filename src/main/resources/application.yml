@@ -1,0 +1,53 @@
+#spring.datasource.driver-class-name=org.hsqldb.jdbc.JDBCDriver
+#spring.datasource.url=jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.jpa.hibernate.ddl-auto=create
+
+#==========================================================
+# For file db use below config
+# Download HSQLDB at https://sourceforge.net/projects/hsqldb/files/latest/download and unzip it to a folder
+# Within the data folder, we'll run the following command
+# java -cp ../lib/hsqldb.jar org.hsqldb.server.Server --database.0 file.testdb --dbname0.testdb
+#
+#spring.datasource.driver-class-name=org.hsqldb.jdbc.JDBCDriver 
+#spring.datasource.url=jdbc:hsqldb:hsql://localhost/testdb 
+#spring.datasource.username=sa 
+#spring.datasource.password= 
+#spring.jpa.hibernate.ddl-auto=update
+#==========================================================
+
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create
+    
+app:
+  action:
+    list:
+      name: list
+      description: Danh sách
+    view:
+      name: view
+      description: Chi tiết
+    add:
+      name: add
+      description: Thêm mới
+    edit:
+      name: edit
+      description: Chỉnh sửa
+    delete:
+      name: delete
+      description: Xóa
+  resource:
+    log:
+      name: log
+      description: Log
+      permission: list,view,add,edit,delete
+    
+      
+      
