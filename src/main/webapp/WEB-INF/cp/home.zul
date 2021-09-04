@@ -1,5 +1,15 @@
 <zk xmlns:n="native" xmlns:x="xhtml" xmlns:zk="zk"
     xmlns:w="http://www.zkoss.org/2005/zk/client">
+    
+    <zscript><![CDATA[
+        String resource = execution.getParameter("resource");
+        String action = execution.getParameter("action");
+        String file = execution.getParameter("file");
+        String ctxPath = execution.getContextPath();
+        String serverName = execution.getServerName() + "";
+        String serverPort = execution.getServerPort() + "";
+    
+    ]]></zscript>
     <include instant="true" src="${execution.getParameter('file')}"></include>
     
 </zk>
