@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Configuration
 @ConfigurationProperties(prefix = "app.resource", ignoreUnknownFields = true)
-public final class Resource {
+public class Resource {
 
     private final Log log = new Log();
     

@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Configuration
 @ConfigurationProperties(prefix = "app.action", ignoreUnknownFields = true)
-public final class Action {
+public class Action {
 
     private final List list = new List();
     private final View view = new View();

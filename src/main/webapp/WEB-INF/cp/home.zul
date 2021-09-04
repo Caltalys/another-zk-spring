@@ -1,0 +1,5 @@
+<zk xmlns:n="native" xmlns:x="xhtml" xmlns:zk="zk"
+    xmlns:w="http://www.zkoss.org/2005/zk/client">
+    <include instant="true" src="${execution.getParameter('file')}"></include>
+    
+</zk>
