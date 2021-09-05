@@ -33,10 +33,10 @@ public class MainViewModel {
     private PageModel<?> defaultPage;
     private PageModel<?> currentPage;
 
-    @Init
+//    @Init
     public void init() {
-        log.debug("resources {}", resources);
-        log.debug("actions {}", actions);
+//        log.debug("resources {}", resources);
+//        log.debug("actions {}", actions);
 //        Using as SPA in wiich browser url not change
 //        defaultPage = new LogPageModel("log/list.zul", "log", "list", Log.class);
 //        if(currentPage==null)
