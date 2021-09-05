@@ -235,6 +235,14 @@
                             <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                             
                             <!-- Single item menu -->
+                            <!-- <n:li class="nav-item">
+                                <x:a class="nav-link ${mainVm.currentPage.name eq 'log' ? 'active' : ''}"
+                                    zk:onClick="@command('navigate', page='log')">
+                                    <n:i class="nav-icon far fa-comment-alt"></n:i>
+                                    <n:p>Log</n:p>
+                                </x:a>
+                            </n:li> -->
+                            
                             <n:li class="nav-item">
                                 <n:a href="${execution.contextPath}/cp/log" class="nav-link ${resource eq 'log' ? 'active' : ''}">
                                     <n:i class="nav-icon far fa-comment-alt"></n:i>
@@ -282,6 +290,7 @@
             <!-- Content Wrapper. Contains page content -->
             <n:div class="content-wrapper">
                 <include instant="true" src="${execution.getParameter('file')}"></include>
+                <!-- <include pageModel="@load(mainVm.currentPage)" src="@load(mainVm.currentPage.uri)"/> -->
             </n:div><!-- ./content-wrapper -->
             
         </div><!-- ./wrapper -->

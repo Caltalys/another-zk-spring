@@ -17,7 +17,7 @@ public class Resource {
     @Setter
     public static class Log {
         private String name;
-        private String descripion;
+        private String description;
         private String[] permission;
     }
     

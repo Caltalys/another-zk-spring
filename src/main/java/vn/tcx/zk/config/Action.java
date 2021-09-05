@@ -49,7 +49,7 @@ public class Action {
     @Setter
     public static class Delete {
         private String name;
-        private String descripion;
+        private String description;
     }
     
 }

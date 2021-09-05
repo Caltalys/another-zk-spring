@@ -23,7 +23,7 @@ import vn.tcx.zk.module.log.LogService;
  *
  */
 @VariableResolver(DelegatingVariableResolver.class)
-public class LogPageModel extends PageModel<Log>{
+public class DonViPageModel extends PageModel<Log>{
 
     /**
      * @param uri
@@ -31,7 +31,7 @@ public class LogPageModel extends PageModel<Log>{
      * @param action
      * @param clazz
      */
-    LogPageModel(String uri, String name, String action, Class<Log> clazz) {
+    DonViPageModel(String uri, String name, String action, Class<Log> clazz) {
         super(uri, name, action, clazz);
     }
 

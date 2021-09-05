@@ -1,8 +1,11 @@
+<?page contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window xmlns:zk="zk" xmlns:n="native" xmlns:x="xhtml"
+	<div xmlns:zk="zk" xmlns:n="native" xmlns:x="xhtml"
 		viewModel="@id('vm') @init('vn.tcx.zk.module.log.LogViewModel')"
 		validationMessages="@id('vmsgs')" width="600px" vflex="1">
-		
+        <zscript><![CDATA[
+            self.page.title= "Quản lý Đơn vị";
+        ]]></zscript>
 		<!-- Content Header (Page header) -->
 	    <n:div class="content-header">
 	      <n:div class="container-fluid">
@@ -20,33 +23,5 @@
 	      </n:div><!-- /.container-fluid -->
 	    </n:div><!-- /.content-header -->
 		
-		
-		<vlayout>
-			<hbox align="center" hflex="1">
-				Log message: <textbox value="@save(vm.message)"
-					onOK="@command('addLog')" hflex="1" placeholder="What happened?" />
-				<button label="add" onClick="@command('addLog')" />
-			</hbox>
-			<listbox model="@bind(vm.logListModel)" rows="10">
-				<listhead>
-					<listheader hflex="min" />
-					<listheader hflex="min" />
-					<listheader />
-				</listhead>
-				<template name="model">
-					<listitem>
-						<listcell>
-							<button label="delete" onClick="@command('deleteLog', log=each)" />
-						</listcell>
-						<listcell>
-							<label value="@bind(each.date) @converter('formattedDate', format='yyyy/MM/dd HH:mm:ss')" />
-						</listcell>
-						<listcell>
-							<label value="@bind(each.message)" />
-						</listcell>
-					</listitem>
-				</template>
-			</listbox>
-		</vlayout>
-	</window>
+	</div>
 </zk>
