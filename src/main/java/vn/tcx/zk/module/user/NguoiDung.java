@@ -33,15 +33,13 @@ import vn.tcx.zk.core.BaseEntity;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class NguoiDung extends BaseEntity<NguoiDung>{
     
-    @NotBlank
-    @Size(max=255)
+    @NotBlank @Size(max=64)
     private String hoVaTen;
-    @NotBlank
-    @Size(max=255)
+    @NotBlank @Size(max=255)
     private String email;
-    @Size(max=255)
+    @NotBlank @Size(max=64)
     private String matKhau;
-    @Size(max=255)
+    @Size(max=64)
     private String salkey;
     
     private boolean active;

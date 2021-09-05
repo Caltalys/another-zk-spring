@@ -30,6 +30,7 @@ spring:
     hibernate.ddl-auto: create
     
 app:
+  # Update vn.tcx.zk.config.Action, vn.tcx.zk.config.Entry as resource permission (optional) when add new entry
   action:
     list:
       name: list
@@ -46,11 +47,20 @@ app:
     delete:
       name: delete
       description: Xóa
+      
+  # Update vn.tcx.zk.config.Resource, vn.tcx.zk.config.Entry when add new entry
   resource:
     log:
       name: log
       description: Log
       permission: list,view,add,edit,delete
-    
+    nguoi-dung:
+      name: nguoidung
+      description: Quản lý người dùng
+      permission: list,view,add,edit,delete
+    vai-tro:
+      name: vaitro
+      description: Quản lý vai trò
+      permission: list,view,add,edit,delete
       
       

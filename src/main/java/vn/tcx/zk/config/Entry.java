@@ -33,7 +33,11 @@ public class Entry {
 
     public String[] getResources() {
         if(resources==null) {
-            resources = new String[] { resource.getLog().getName() };
+            resources = new String[] { 
+                    resource.getLog().getName(), 
+                    resource.getNguoiDung().getName(), 
+                    resource.getVaitro().getName() 
+                };
         }
         return resources;
     }

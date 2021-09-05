@@ -12,6 +12,8 @@ import lombok.Setter;
 public class Resource {
 
     private final Log log = new Log();
+    private final NguoiDung nguoiDung = new NguoiDung();
+    private final VaiTro vaitro = new VaiTro();
     
     @Getter
     @Setter
@@ -21,4 +23,19 @@ public class Resource {
         private String[] permission;
     }
     
+    @Getter
+    @Setter
+    public static class NguoiDung {
+        private String name;
+        private String description;
+        private String[] permission;
+    }
+    
+    @Getter
+    @Setter
+    public static class VaiTro {
+        private String name;
+        private String description;
+        private String[] permission;
+    }
 }
