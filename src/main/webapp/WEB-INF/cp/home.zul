@@ -52,7 +52,7 @@
 <!--     <script type="text/javascript" src="/plugins/summernote/summernote-bs4.min.js"></script> -->
     <!-- overlayScrollbars -->
     <script type="text/javascript" src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script type="text/javascript" src="/plugins/pace-progress/pace.min.js"></script>
+    <script type="text/javascript" src="/plugins/moment/moment-with-locales.min.js"></script>
     <!-- AdminLTE App -->
     <script type="text/javascript" src="/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
@@ -62,7 +62,7 @@
 
 
     <div class="hold-transition sidebar-mini layout-fixed">
-        <div class="wrapper">
+        <div class="wrapper" viewModel="@id('mainVm') @init('vn.tcx.zk.vm.MainViewModel')">
             <zscript><![CDATA[
                 String resource = execution.getParameter("resource");
                 String action = execution.getParameter("action");
@@ -90,15 +90,26 @@
                         </n:a>
                     </n:li>
                     <n:li class="nav-item d-none d-sm-inline-block">
-                        <n:a href="index3.html" class="nav-link">Home</n:a>
+                        <n:a href="${execution.contextPath}/cp" class="nav-link">Home</n:a>
                     </n:li>
                     <n:li class="nav-item d-none d-sm-inline-block">
-                        <n:a href="#" class="nav-link">Contact</n:a>
+                        <n:a href="mailto:trandtb@greenglobal.vn" class="nav-link">Contact</n:a>
                     </n:li>
                 </n:ul>
                 
                 <!-- Right navbar links -->
                 <n:ul class="navbar-nav ml-auto">
+                    <n:li class="nav-item">
+                        <n:a class="nav-link" href="#">
+                            <n:i class="fas fa-clock"></n:i>
+                            <label id="time" />
+                            <script>
+	                            setInterval(function(){
+	                                jq("$time").html(moment().format("DD / MM / YYYY, h:mm:ss a"));
+	                            } ,1000);
+                            </script>
+                        </n:a>
+                    </n:li>
                     <!-- Messages Dropdown Menu -->
                     <n:li class="nav-item dropdown">
                         <n:a class="nav-link" data-toggle="dropdown" href="#">
@@ -242,12 +253,12 @@
                                 </n:a>
                                 <n:ul class="nav nav-treeview">
                                     <n:li class="nav-item">
-		                                <n:a href="${execution.contextPath}/cp/donvi" class="nav-link ${resource eq 'donvi' ? 'active' : ''}">
-		                                    <n:i class="far fa-circle nav-icon ${resource eq 'donvi' ? 'text-primary' : ''}"></n:i>
-		                                    <n:p>Đơn vị</n:p>
-		                                </n:a>
-		                            </n:li>
-		                            <n:li class="nav-item">
+                                        <n:a href="${execution.contextPath}/cp/donvi" class="nav-link ${resource eq 'donvi' ? 'active' : ''}">
+                                            <n:i class="far fa-circle nav-icon ${resource eq 'donvi' ? 'text-primary' : ''}"></n:i>
+                                            <n:p>Đơn vị</n:p>
+                                        </n:a>
+                                    </n:li>
+                                    <n:li class="nav-item">
                                         <n:a href="${execution.contextPath}/cp/vaitro" class="nav-link ${resource eq 'vaitro' ? 'active' : ''}">
                                             <n:i class="far fa-circle nav-icon ${resource eq 'vaitro' ? 'text-primary' : ''}"></n:i>
                                             <n:p>Vai trò</n:p>
