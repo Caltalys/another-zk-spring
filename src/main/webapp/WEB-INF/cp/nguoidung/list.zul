@@ -26,7 +26,7 @@
                             <n:h4 class="app-card-title">Danh sách người dùng</n:h4>
                             <n:div class="card-tools">
                                 <x:button class="btn btn-sm btn-primary"
-                                    onClick="@command('redirectPage', zul='nguoidung/add.zul', vmArgs=vm, vm=null)">
+                                    onClick="@command('redirectPageWithTypeCmd', zul='nguoidung/add.zul', vmArgs=vm, type='vn.tcx.zk.vm.user.NguoiDungModel')">
                                     <n:i class="fa fa-plus"></n:i>&#160;&#160;Thêm mới
                                 </x:button>
                                 <!-- <n:button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -50,21 +50,21 @@
                                             <row viewModel="@id('item') @init(each)">
                                                 <label value="@bind(forEachStatus.index + 1)" style="text-align:center;display:block"/>
                                                 <a label="@load(each.hoVaTen)" 
-                                                    onClick="@command('redirectPage', zul='nguoidung/view.zul',vmArgs=vm,vm=item)" style="text-align:center"/>
+                                                    onClick="@command('redirectPageCmd', zul='nguoidung/view.zul',vmArgs=vm,vm=item)" style="text-align:center"/>
                                                 <cell sclass="text-align-center">
                                                     <label value="@load(each.active)"  style="text-align:center"/>
                                                 </cell>
-                                                <div class="text-align-center">
+                                                <div class="app-btn-group">
                                                     <x:button
-                                                        title="Xem" class="btn btn-primary btn-xs" onClick="@command('redirectPage', zul='nguoidung/view.zul',vmArgs=vm,vm=item)">
+                                                        title="Xem" class="btn btn-primary btn-xs" onClick="@command('redirectPageCmd', zul='nguoidung/view.zul',vmArgs=vm, vm=item)">
                                                         <n:i class="fa fa-eye"></n:i>
                                                     </x:button>
                                                     <x:button title="Sửa" class="btn btn-primary btn-xs"
-                                                        onClick="@command('redirectPage', zul='nguoidung/view.zul',vmArgs=vm,vm=item)">
+                                                        onClick="@command('redirectPageCmd', zul='nguoidung/view.zul',vmArgs=vm, vm=item)">
                                                         <n:i class="fa fa-edit"></n:i>
                                                     </x:button>
                                                     <x:button class="btn btn-danger btn-xs" title="Xóa"
-                                                        onClick="@command('deleteTrangThaiConfirmAndNotify', notify=vm, attr='targetQuery')">
+                                                        onClick="@command('deleteTrangThaiConfirmAndNotifyCmd', notify=vm, attr='targetQuery')">
                                                         <n:i class="fa fa-trash"></n:i>
                                                     </x:button>
                                                 </div>

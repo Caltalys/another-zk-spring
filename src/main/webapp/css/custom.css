@@ -3,3 +3,49 @@
     font-weight: 400;
     margin: 0;
 }
+
+.app-btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.z-window-modal, .z-messagebox-window {
+    padding: 0px;
+}
+
+.z-window-modal .z-window-header, .z-messagebox-window .z-window-header {
+    padding: 16px 16px;
+    text-transform: uppercase;
+    color:#ffffff;
+    background:#007bff;
+}
+
+.z-window-modal .z-window-header .z-window-icons {
+	margin-top: -4px;
+}
+
+.z-window-modal .z-window-header .z-window-icon {
+    color: #ffffff;
+}
+/* .z-window, .z-window-content { */
+/* 	padding: 0px; */
+/* } */
+
+/* .z-window, .z-window-content .card { */
+/*     margin-bottom: 0px; */
+/*     margin-left: -7.5px; */
+/*     margin-right: -7.5px; */
+/* } */
+
+/* .z-window-header { */
+/* 	padding: 12px; */
+/* 	height: 48px; */
+/*     background-color: #007bff; */
+/*     color: #ffffff; */
+/*     text-transform: uppercase; */
+/* } */
+
+/* .z-window-icons { */
+/*     margin-top: -4px; */
+/*     color: #ffffff; */
+/* } */

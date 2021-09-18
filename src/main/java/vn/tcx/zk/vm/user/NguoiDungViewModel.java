@@ -26,9 +26,14 @@ public class NguoiDungViewModel extends AbstractViewModel {
     @WireVariable
     NguoiDungService nguoiDungService;
 
+    List<NguoiDungModel> danhSach = new ArrayList<>();
+    
     @Init
     public void init() {
         pageTitle = resource.getNguoiDung().getDescription();
+        NguoiDungModel entry = new NguoiDungModel();
+        entry.setHoVaTen("Đinh Trân");
+        danhSach.add(entry);
     }
 
     /**
@@ -38,9 +43,7 @@ public class NguoiDungViewModel extends AbstractViewModel {
         return nguoiDungService;
     }
     
-    public List<NguoiDung> getDanhSach() {
-        NguoiDung entry = new NguoiDung();
-        entry.setHoVaTen("Đinh Trân");
-        return Arrays.asList(entry);
+    public List<NguoiDungModel> getDanhSach() {
+        return danhSach;
     }
 }

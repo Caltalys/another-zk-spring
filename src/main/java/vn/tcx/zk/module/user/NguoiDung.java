@@ -35,10 +35,13 @@ public class NguoiDung extends BaseEntity<NguoiDung>{
     
     @NotBlank @Size(max=64)
     private String hoVaTen;
+    
     @NotBlank @Size(max=255)
     private String email;
+    
     @NotBlank @Size(max=64)
     private String matKhau;
+    
     @Size(max=64)
     private String salkey;
     

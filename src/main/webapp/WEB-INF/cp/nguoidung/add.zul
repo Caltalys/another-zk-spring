@@ -1,0 +1,38 @@
+<window xmlns:n="native" xmlns:x="xhtml" xmlns:zk="zk" id="nguoiDungWindow" 
+    mode="modal" closable="true" border="normal" action="show: slideIn" width="800px"
+    class="app-modal" contentStyle="overflow:auto;" title="Thêm người dùng"
+    viewModel="@id('vm') @init(arg.vm)" validationMessages="@id('vmsgs')" 
+    onClose="@command('closeWindowCmd', notifyModel=vmArgs, attr='danhSach', detach=nguoiDungWindow)"
+    whatever="@load(true, after='saveNguoiDung') @converter('vn.tcx.zk.vm.converter.DetachConverter')"
+    form="@id('fx') @load(vm) @save(vm, before={'saveNguoiDung'})">
+    
+    <zscript><![CDATA[
+        vmArgs = arg.get("vmArgs");
+    ]]></zscript>
+    ${ vmArgs }
+    <n:section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <x:label>Họ và tên<n:small class="required"> *</n:small></x:label>
+                        <textbox class="form-control" width="100%"
+                            value="@load(vm.hoVaTen) @save(vm.hoVaTen, before='saveNguoiDung') @validator('vn.tcx.zk.core.BaseValidator', constraint='no empty')" />
+                        <label class="error" value="@load(vmsgs[self.previousSibling])" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <x:button class="btn btn-primary float-right" type="button"
+                        onClick="@command('saveNguoiDung', notifyModel=vmArgs, attr='danhSach', wdn=nguoiDungWindow)">
+                        <n:i class="fa fa-save"></n:i>Lưu
+                    </x:button> 
+                    <x:button class="btn btn btn-default" 
+                        zk:onClick="nguoiDungWindow.detach()">
+                        <n:i class="fa fa-back"></n:i>Hủy
+                    </x:button>
+                </div>
+            </div>
+        </div>
+    </n:section>
+
+</window>
